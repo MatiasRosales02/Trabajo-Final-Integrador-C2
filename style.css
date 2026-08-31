@@ -1,39 +1,69 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+
+/* main */
+
+main {
+
+    padding-top: 100px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 4rem;
 }
 
-:root {
-    --color-primario: #1e293b;
-    --color-secundario: #ff7700;
-    --color-btn: #d97757;
-    --color-blanco: #ffffff;
+.nosotros {
+    text-align: center;
+    padding: 4rem 1rem 3rem 1rem;
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+ 
+.nosotros h1 {
+    font-size: 2.5rem;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
 }
 
-body{
-    background: var(--color-primario);
+.nosotros p {
+    font-size: 1.1rem;
+    color: #cbd5e1; 
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.tecnicaturas, .recursos, .profesores {
+    margin-bottom: 4rem;
+}
+
+.tecnicaturas > div:first-child,
+.recursos > div:first-child,
+.profesores > div:first-child {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
     color: var(--color-blanco);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5rem;
 }
 
-.logo span {
-    color: var(--color-primario);
-}
 
-.logo {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.header {
-    position: fixed;
-    width: 100%;
-    padding: 2rem;
+h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
     background-color: var(--color-secundario);
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
 }
+
 
 .navbar {
     display: flex;
@@ -42,42 +72,71 @@ body{
     padding: 5px 10px;
     border-radius: 50px;
 }
+section > div > p {
+    color: #94a3b8;
+    font-size: 1rem;
 
-.nav-list {
-    display:flex;
-    gap: 5rem;
 }
 
-.nav-list li {
-    list-style: none;
+
+.tecnicaturas-main,
+.recursos-main,
+.profesores-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
-.nav-list li a {
-    padding: 15px;
-    text-decoration: none;
-    color: var(--color-blanco);
-    font-weight: 500;
-    border-radius: 50px;
-    transition: 0.3s;
+.tecnicatura-card,
+.recurso-card,
+.profesor-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.8rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.dropdown-menu li {
-    padding: 15px;
+.tecnicatura-card:hover,
+.recurso-card:hover,
+.profesor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--color-secundario);
 }
 
-.dropdown-menu {
-    background-color: var(--color-secundario);
-    display: none;
-    position: absolute;
-    margin-top: 10px;
-    padding: 15px 5px;
-    border-radius: 20px;
+.tecnicatura-card h3,
+.recurso-card h3,
+.profesor-card h3 {
+    color: var(--color-secundario);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
 }
 
-.nav-list li a:hover{
-    color: var(--color-primario);
-    text-shadow: 0 0 1rem var(--color-blanco);
+.tecnicatura-card p,
+.recurso-card p,
+.profesor-card p {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+    main {
+        max-width: 90%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .nosotros h1 {
+        font-size: 2.2rem;
+    }
+}
+
 
 .nav-list li:hover > ul {
     display: block;
