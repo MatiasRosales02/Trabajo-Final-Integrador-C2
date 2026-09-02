@@ -1,9 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --color-primario: #1e293b;
+    --color-secundario: #ff7700;
+    --color-btn: #d97757;
+    --color-blanco: #ffffff;
+    --color-texto-suave: #cbd5e1;
+    --sombra-card: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+.logo span {
+    color: var(--color-primario);
+}
+
+.logo {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--color-secundario);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 5rem;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list li a {
+    padding: 15px;
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: 500;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.dropdown-menu li {
+    padding: 15px;
+}
+
+.dropdown-menu {
+    background-color: var(--color-secundario);
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    padding: 15px 5px;
+    border-radius: 20px;
+}
+
+.nav-list li a:hover {
+    color: var(--color-primario);
+    text-shadow: 0 0 1rem var(--color-blanco);
+}
+
+.nav-list li:hover>ul {
+    display: block;
+}
 
 /* main */
 
 main {
-
-    padding-top: 100px; 
+    padding-top: 100px;
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 2rem;
@@ -14,6 +99,11 @@ main {
 .nosotros {
     text-align: center;
     padding: 4rem 1rem 3rem 1rem;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
     border-radius: 20px;
     margin-bottom: 3rem;
@@ -28,19 +118,21 @@ main {
 
 .nosotros p {
     font-size: 1.1rem;
-    color: #cbd5e1; 
+    color: var(--color-texto-suave);
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
 }
 
-.tecnicaturas, .recursos, .profesores {
+.tecnicaturas,
+.recursos,
+.profesores {
     margin-bottom: 4rem;
 }
 
-.tecnicaturas > div:first-child,
-.recursos > div:first-child,
-.profesores > div:first-child {
+.tecnicaturas>div:first-child,
+.recursos>div:first-child,
+.profesores>div:first-child {
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -48,11 +140,9 @@ main {
 h2 {
     font-size: 2rem;
     color: var(--color-blanco);
-    position: relative;
     display: inline-block;
     margin-bottom: 0.5rem;
 }
-
 
 h2::after {
     content: '';
@@ -64,11 +154,10 @@ h2::after {
     border-radius: 2px;
 }
 
-section > div > p {
+section>div>p {
     color: #94a3b8;
     font-size: 1rem;
 }
-
 
 .tecnicaturas-main,
 .recursos-main,
@@ -76,6 +165,7 @@ section > div > p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    width: 100%;
 }
 
 .tecnicatura-card,
@@ -94,7 +184,7 @@ section > div > p {
 .recurso-card:hover,
 .profesor-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--sombra-card);
     border-color: var(--color-secundario);
 }
 
@@ -114,6 +204,46 @@ section > div > p {
     line-height: 1.5;
 }
 
+/* footer */
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem 1rem 1.5rem 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: var(--color-texto-suave);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--color-secundario);
+}
+
+.footer p {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1024px) {
@@ -129,13 +259,32 @@ section > div > p {
 }
 
 @media (max-width: 768px) {
+
+    .header {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .nav-list {
+        gap: 1.5rem;
+    }
+
+    .nav-list li a {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
     main {
         padding-top: 130px;
         padding-bottom: 3rem;
     }
 
+    section[id] {
+        scroll-margin-top: 130px;
+    }
+
     .nosotros {
         padding: 2.5rem 1rem;
+        min-height: 30vh;
         margin-bottom: 2.5rem;
     }
 
@@ -151,7 +300,9 @@ section > div > p {
         font-size: 1.6rem;
     }
 
-    .tecnicaturas, .recursos, .profesores {
+    .tecnicaturas,
+    .recursos,
+    .profesores {
         margin-bottom: 3rem;
     }
 
@@ -166,6 +317,10 @@ section > div > p {
     .profesor-card {
         padding: 1.4rem;
     }
+
+    .footer-links ul {
+        gap: 1.2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -175,12 +330,31 @@ section > div > p {
         padding-top: 140px;
     }
 
+    section[id] {
+        scroll-margin-top: 140px;
+    }
+
+    .header {
+        padding: 1rem;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        row-gap: 0.5rem;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
     .nosotros h1 {
         font-size: 1.5rem;
     }
 
-    .nosotros p, 
-    section > div > p {
+    .nosotros p,
+    section>div>p {
         font-size: 0.9rem;
     }
 
@@ -191,6 +365,11 @@ section > div > p {
     .tecnicaturas-main,
     .recursos-main,
     .profesores-main {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        gap: 0.8rem;
     }
 }
