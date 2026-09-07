@@ -7,12 +7,12 @@
     <meta name="description" content="Biblioteca virtual de la UTN-FRT para las tecnicaturas">
     <meta name="keywords" content="UTN, UTN-FRT, Biblioteca UTN, Biblioteca Virtual UTN, Tecnicaturas, Tecnicaturas UTN, Tecnicaturas UTN-FRT, Programación UTN, Programación UTN-FRT, Higiene y seguridad UTN, Higiene y seguridad UTN-FRT, Logística UTN, Logística UTN-FRT, Desarrollo de videojuegos UTN, Desarrollo de videojuegos UTN-FRT, Mecatrónica UTN, Mecatrónica UTN-FRT, mantenimiento industrial UTN, energías renovables UTN, profesores UTN, material de estudio UTN">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!--links-->
-    <link rel="icon" type="image/x-icon" href="/img/logo-utn-3.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="/style.css">
     <!--titulo-->
     <title>FRT-UTN | Biblioteca digital</title>
@@ -88,87 +88,90 @@
                     Universidad Tecnológica Nacional.</p>
             </div>
         </section>
-
-        <section id="tecnicaturas" class="tecnicaturas" aria-labelledby="titulo-tecnicaturas">
-            <div>
-                <h2 id="titulo-tecnicaturas">Tecnicaturas</h2>
-                <p>Explora nuestras tecnicaturas y accede a recursos educativos de calidad.</p>
-            </div>
-            <div class="tecnicaturas-main">
-                <article class="tecnicatura-card">
-                    <h3>Programación</h3>
-                    <p>Aprende a programar en diversos lenguajes y desarrolla tus habilidades en el mundo del software.
-                    </p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Desarrollo de videojuegos</h3>
-                    <p>Descubre el proceso de creación de videojuegos, desde la idea hasta la implementación.</p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Higiene y seguridad</h3>
-                    <p>Conoce las normas y prácticas para garantizar un entorno laboral seguro y saludable.</p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Mecatrónica</h3>
-                    <p>Explora la integración de la mecánica, electrónica e informática en sistemas automatizados.</p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Logística</h3>
-                    <p>Aprende sobre la gestión eficiente de recursos, transporte y distribución de productos.</p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Energías renovables</h3>
-                    <p>Investiga las fuentes de energía sostenibles y su aplicación en el mundo moderno.</p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Mantenimiento Industrial</h3>
-                    <p>Adquiere conocimientos sobre el mantenimiento preventivo y correctivo de equipos industriales.
-                    </p>
-                </article>
+        <section id="tecnicaturas">
+            <div class="container-fluid py-4">
+                <h2 class="text-center fst-italic">
+                    Tecnicaturas
+                </h2>
+                <p class="lead text-center my-5">
+                    Explora nuestras tecnicaturas y accede a recursos educativos de calidad.
+                </p>
+                <div class="d-flex justify-content-center flex-wrap gap-2">
+                    <button type="button" class="btn btn-tecnicatura">
+                        Programación
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Videojuegos
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Higiene y seguridad
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Logística
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Mantenimiento Industrial
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Mecatrónica
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Energía Sustentable
+                    </button>
+                </div>
             </div>
         </section>
 
-        <section id="profesores" class="profesores" aria-labelledby="titulo-profesores">
-            <div>
-                <h2 id="titulo-profesores">Profesores</h2>
-                <p>Conoce a nuestros profesores y descubre su experiencia y trayectoria en sus respectivas áreas.</p>
-            </div>
-            <div class="profesores-main">
-                <article class="profesor-card">
-                    <h3>Profesor 1</h3>
-                    <p>Especialista en programación con más de 10 años de experiencia en desarrollo de software.</p>
-                </article>
-                <article class="profesor-card">
-                    <h3>Profesor 2</h3>
-                    <p>Experto en desarrollo de videojuegos, con un enfoque en diseño y narrativa interactiva.</p>
-                </article>
-                <article class="profesor-card">
-                    <h3>Profesor 3</h3>
-                    <p>Profesional en higiene y seguridad, dedicado a la implementación de prácticas seguras en el
-                        trabajo.</p>
-                </article>
+        <section id="profesores" class="profesores my-5" aria-labelledby="titulo-profesores">
+            <h2 class="text-center fst-italic">
+                Profesores
+            </h2>
+            <div id="cardProfesor" class="col-lg-4">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                        dy=".3em">140x140</text>
+                </svg>
+
+                <h3>Georgina Costilla</h3>
+                <p>Graduada en Ciencias de la Comunicación social y Programadora.</p>
+                <div id="btn-Profesor" class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-Profesor">Programacion 3</button>
+                    <button type="button" class="btn btn-Profesor">Programacion 4</button>
+                </div>
             </div>
         </section>
 
-        <section id="recursos" class="recursos" aria-labelledby="titulo-recursos">
-            <div>
-                <h2 id="titulo-recursos">Recursos</h2>
-                <p>Accede a una variedad de recursos educativos para complementar tu aprendizaje.</p>
-            </div>
-            <div class="recursos-main">
-                <article class="recurso-card">
-                    <h3>Clases grabadas</h3>
-                    <p>Revisa las clases grabadas para reforzar tus conocimientos y repasar conceptos clave.</p>
-                </article>
-                <article class="recurso-card">
-                    <h3>Documentación</h3>
-                    <p>Consulta documentación técnica y material de estudio para profundizar en tus áreas de interés.
-                    </p>
-                </article>
-                <article class="recurso-card">
-                    <h3>Ejercicios</h3>
-                    <p>Practica con ejercicios diseñados para mejorar tus habilidades y aplicar lo aprendido.</p>
-                </article>
+        <section id="recursos" class="recursos my-5" aria-labelledby="titulo-recursos">
+            <h2 class="text-center fst-italic">
+                Recursos
+            </h2>
+            <div class="row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Dossier 2026</h5>
+                            <p class="card-text">Encontraras toda la informacion esencial para la materia de
+                                Programacion 3.
+                            </p>
+                            <a href="#" class="btn btn-primary">Leer</a>
+                            <a href="#" class="btn btn-primary">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Recursos extras 2026</h5>
+                            <p class="card-text">Encontraras recursos adicionales para la materia de Programacion 3.
+                            </p>
+                            <a href="#" class="btn btn-primary">Leer</a>
+                            <a href="#" class="btn btn-primary">Descargar</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
