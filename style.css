@@ -17,7 +17,7 @@
 /*----Navbar----*/
 
 body {
-    background: var(--color-primario);
+    background-color: var(--color-primario);
     color: var(--color-blanco);
 }
 
@@ -92,6 +92,7 @@ body {
 .dropdown-item:hover {
     color: var(--color-blanco);
     background-color: var(--color-secundario);
+    z-index: 1;
 }
 
 /*
@@ -149,6 +150,19 @@ body {
 
 /* main */
 
+.nosotros {
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nosotros h1 {
+    color: var(--color-secundario);
+}
+
+.nosotros p {
+    color: var(--color-texto-suave);
+}
+/*
 main {
     padding-top: 100px;
     max-width: 1200px;
@@ -185,12 +199,11 @@ main {
     margin: 0 auto;
     line-height: 1.6;
 }
+*/
 
 /* Tecnicaturas */
 
 #tecnicaturas {
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
     width: 100%;
 }
 
@@ -222,37 +235,37 @@ main {
 
 /* SECCIÓN PROFESORES */
 
-#profesores {
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    width: 100%;
-}
-
 #profesores h2 {
     color: var(--color-secundario);
     background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
-    border-radius: 20px;
-    margin-bottom: 2%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #cardProfesor {
-    text-align: center;
-    padding: 2%;
-    margin-bottom: 2rem;
-    border-radius: 20px;
-    margin-bottom: 2%;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
 }
 
 #cardProfesor:hover {
     background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
     box-shadow: var(--sombra-card);
     border-color: var(--color-secundario);
-    width: 100%;
+    width: 60%;
 }
 
 .btn-Profesor {
+    color: var(--color-blanco);
+    border: 2px solid var(--color-btn);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+
+}
+/* Recursos */
+
+#recursos h2 {
+    color: var(--color-secundario);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+}
+
+.btn-recursos {
     color: var(--color-blanco);
     border: 2px solid var(--color-btn);
     background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
@@ -381,7 +394,7 @@ section>div>p {
 }
 
 /* MEDIA QUERIES */
-
+/*
 @media (max-width: 1024px) {
     main {
         max-width: 90%;
