@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 :root {
@@ -14,35 +14,94 @@
     --sombra-card: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/*----Navbar----*/
+
 body {
     background: var(--color-primario);
     color: var(--color-blanco);
 }
 
-.logo span {
-    color: var(--color-primario);
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: var(--color-secundario);
+    z-index: 1000;
 }
 
 .logo {
-    color: var(--color-blanco);
     text-decoration: none;
     font-size: 25px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
-.header {
-    position: fixed;
-    width: 100%;
-    padding: 2rem;
+.logo-color1, .nav-link {
+    color: var(--color-blanco);
+}
+
+.logo-color2, .navbar .nav-link.active,
+.nav-link:hover,
+.dropdown-item:hover,
+.navbar .nav-link[aria-expanded="true"] {
+    color: var(--color-secundario);
+    transition: .4s;
+}
+
+.navbar{
+    background: var(--color-primario);
+    border-radius: 20px;
+}
+
+/*--Menú hamburguesa--*/
+.navbar-toggler {
+    border-color: var(--color-blanco);
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(90deg);
+}
+
+/*--transición del navbar--*/
+.navbar-collapse {
+    transition: height 0.4s ease;
+}
+
+/**--dropdown transición--*/
+.dropdown-menu {
+    background-color: var(--color-secundario);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    color: var(--color-blanco);
     background-color: var(--color-secundario);
 }
 
+/*
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 5px 10px;
-    border-radius: 50px;
+    border-radius: 20px;
+    z-index: -1;
 }
 
 .nav-list {
@@ -63,12 +122,13 @@ body {
     transition: 0.3s;
 }
 
+
 .dropdown-menu li {
-    padding: 15px;
+    padding: 150px;
 }
 
 .dropdown-menu {
-    background-color: var(--color-secundario);
+    background-color: var(--color-blanco);
     display: none;
     position: absolute;
     margin-top: 10px;
@@ -84,6 +144,8 @@ body {
 .nav-list li:hover>ul {
     display: block;
 }
+*/
+
 
 /* main */
 
