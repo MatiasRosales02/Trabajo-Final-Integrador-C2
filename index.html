@@ -7,12 +7,12 @@
     <meta name="description" content="Biblioteca virtual de la UTN-FRT para las tecnicaturas">
     <meta name="keywords" content="UTN, UTN-FRT, Biblioteca UTN, Biblioteca Virtual UTN, Tecnicaturas, Tecnicaturas UTN, Tecnicaturas UTN-FRT, Programación UTN, Programación UTN-FRT, Higiene y seguridad UTN, Higiene y seguridad UTN-FRT, Logística UTN, Logística UTN-FRT, Desarrollo de videojuegos UTN, Desarrollo de videojuegos UTN-FRT, Mecatrónica UTN, Mecatrónica UTN-FRT, mantenimiento industrial UTN, energías renovables UTN, profesores UTN, material de estudio UTN">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!--links-->
-    <link rel="icon" type="image/x-icon" href="/img/logo-utn-3.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="/style.css">
     <!--titulo-->
     <title>FRT-UTN | Biblioteca digital</title>
@@ -79,96 +79,239 @@
             </div>
         </nav>
     </header>
-
-    <main>
-        <section id="nosotro" class="nosotros" aria-labelledby="titulo-nosotros">
+    
+    <main class="container my-5 px-4 pb-5 pt-5">
+        <section id="nosotro"
+            class="nosotros text-center p-4 pt-5 pb-4 min-vh-40 d-flex flex-column justify-content-center align-items-center mb-5 rounded-4 border border-white border-opacity-10"
+            aria-labelledby="titulo-nosotros">
             <div>
-                <h1 id="titulo-nosotros">Biblioteca digital FRT-UTN</h1>
-                <p>Bienvenido a la biblioteca digital de las Tecnicaturas de la Facultad Regional Tucumán de la
+                <h1 id="titulo-nosotros" class="display-5 fw-bold mb-3">Biblioteca digital FRT-UTN</h1>
+                <p class="fs-5 mx-auto lh-base max-w-700">Bienvenido a la biblioteca digital de las Tecnicaturas de la
+                    Facultad Regional Tucumán de la
                     Universidad Tecnológica Nacional.</p>
             </div>
         </section>
-
-        <section id="tecnicaturas" class="tecnicaturas" aria-labelledby="titulo-tecnicaturas">
-            <div>
-                <h2 id="titulo-tecnicaturas">Tecnicaturas</h2>
-                <p>Explora nuestras tecnicaturas y accede a recursos educativos de calidad.</p>
-            </div>
-            <div class="tecnicaturas-main">
-                <article class="tecnicatura-card">
-                    <h3>Programación</h3>
-                    <p>Aprende a programar en diversos lenguajes y desarrolla tus habilidades en el mundo del software.
-                    </p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Desarrollo de videojuegos</h3>
-                    <p>Descubre el proceso de creación de videojuegos, desde la idea hasta la implementación.</p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Higiene y seguridad</h3>
-                    <p>Conoce las normas y prácticas para garantizar un entorno laboral seguro y saludable.</p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Mecatrónica</h3>
-                    <p>Explora la integración de la mecánica, electrónica e informática en sistemas automatizados.</p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Logística</h3>
-                    <p>Aprende sobre la gestión eficiente de recursos, transporte y distribución de productos.</p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Energías renovables</h3>
-                    <p>Investiga las fuentes de energía sostenibles y su aplicación en el mundo moderno.</p>
-                </article>
-                <article class="tecnicatura-card">
-                    <h3>Mantenimiento Industrial</h3>
-                    <p>Adquiere conocimientos sobre el mantenimiento preventivo y correctivo de equipos industriales.
-                    </p>
-                </article>
+        <section id="tecnicaturas">
+            <div class="container-fluid py-4">
+                <h2 class="text-center fst-italic">
+                    Tecnicaturas
+                </h2>
+                <p class="lead text-center my-5">
+                    Explora nuestras tecnicaturas y accede a recursos educativos de calidad.
+                </p>
+                <div class="d-flex justify-content-center flex-wrap gap-2">
+                    <button type="button" class="btn btn-tecnicatura">
+                        Programación
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-file-code" viewBox="0 0 16 16">
+                            <path
+                                d="M6.646 5.646a.5.5 0 1 1 .708.708L5.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708zm2.708 0a.5.5 0 1 0-.708.708L10.293 8 8.646 9.646a.5.5 0 0 0 .708.708l2-2a.5.5 0 0 0 0-.708z" />
+                            <path
+                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Videojuegos <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-controller" viewBox="0 0 16 16">
+                            <path
+                                d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1z" />
+                            <path
+                                d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729q.211.136.373.297c.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466s.34 1.78.364 2.606c.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527s-2.496.723-3.224 1.527c-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.3 2.3 0 0 1 .433-.335l-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a14 14 0 0 0-.748 2.295 12.4 12.4 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.4 12.4 0 0 0-.339-2.406 14 14 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27s-2.063.091-2.913.27" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Higiene y seguridad
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-cone-striped" viewBox="0 0 16 16">
+                            <path
+                                d="m9.97 4.88.953 3.811C10.159 8.878 9.14 9 8 9s-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12m-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4s1.2-.036 1.725-.098m4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257z" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Logística
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-truck" viewBox="0 0 16 16">
+                            <path
+                                d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Mantenimiento Industrial
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-tools" viewBox="0 0 16 16">
+                            <path
+                                d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Mecatrónica
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-cpu-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                            <path
+                                d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-tecnicatura">
+                        Energía Sustentable
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-recycle" viewBox="0 0 16 16">
+                            <path
+                                d="M9.302 1.256a1.5 1.5 0 0 0-2.604 0l-1.704 2.98a.5.5 0 0 0 .869.497l1.703-2.981a.5.5 0 0 1 .868 0l2.54 4.444-1.256-.337a.5.5 0 1 0-.26.966l2.415.647a.5.5 0 0 0 .613-.353l.647-2.415a.5.5 0 1 0-.966-.259l-.333 1.242zM2.973 7.773l-1.255.337a.5.5 0 1 1-.26-.966l2.416-.647a.5.5 0 0 1 .612.353l.647 2.415a.5.5 0 0 1-.966.259l-.333-1.242-2.545 4.454a.5.5 0 0 0 .434.748H5a.5.5 0 0 1 0 1H1.723A1.5 1.5 0 0 1 .421 12.24zm10.89 1.463a.5.5 0 1 0-.868.496l1.716 3.004a.5.5 0 0 1-.434.748h-5.57l.647-.646a.5.5 0 1 0-.708-.707l-1.5 1.5a.5.5 0 0 0 0 .707l1.5 1.5a.5.5 0 1 0 .708-.707l-.647-.647h5.57a1.5 1.5 0 0 0 1.302-2.244z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </section>
 
-        <section id="profesores" class="profesores" aria-labelledby="titulo-profesores">
-            <div>
-                <h2 id="titulo-profesores">Profesores</h2>
-                <p>Conoce a nuestros profesores y descubre su experiencia y trayectoria en sus respectivas áreas.</p>
-            </div>
-            <div class="profesores-main">
-                <article class="profesor-card">
-                    <h3>Profesor 1</h3>
-                    <p>Especialista en programación con más de 10 años de experiencia en desarrollo de software.</p>
-                </article>
-                <article class="profesor-card">
-                    <h3>Profesor 2</h3>
-                    <p>Experto en desarrollo de videojuegos, con un enfoque en diseño y narrativa interactiva.</p>
-                </article>
-                <article class="profesor-card">
-                    <h3>Profesor 3</h3>
-                    <p>Profesional en higiene y seguridad, dedicado a la implementación de prácticas seguras en el
-                        trabajo.</p>
-                </article>
-            </div>
+        <section id="profesores" class="profesores my-5" aria-labelledby="titulo-profesores">
+            <h2 class="text-center rounded-4 mb-3 border border-white border-opacity-10">
+                Profesores
+            </h2>
+            <div id="carGroupProfesores" class="d-flex flex-wrap justify-content-center gap-4">
+                <div id="cardProfesor"
+                    class="card-profesor text-center p-3 mb-4 rounded-4 border border-white border-opacity-10 col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-12">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                            dy=".3em">140x140</text>
+                    </svg>
+
+                    <h3>Georgina Costilla</h3>
+                    <p>Graduada en Ciencias de la Comunicación social y Programadora.</p>
+                    <div id="btn-Profesor" class="btn-group" role="group">
+                        <button type="button" class="btn btn-Profesor">Programacion 3</button>
+                        <button type="button" class="btn btn-Profesor">Programacion 4</button>
+                    </div>
+                </div>
+                <div id="cardProfesor"
+                    class="card-profesor text-center p-3 mb-4 rounded-4 border border-white border-opacity-10 col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-12">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                            dy=".3em">140x140</text>
+                    </svg>
+
+                    <h3>Georgina Costilla</h3>
+                    <p>Graduada en Ciencias de la Comunicación social y Programadora.</p>
+                    <div id="btn-Profesor" class="btn-group" role="group">
+                        <button type="button" class="btn btn-Profesor">Programacion 3</button>
+                        <button type="button" class="btn btn-Profesor">Programacion 4</button>
+                    </div>
+                </div>
+                <div id="cardProfesor"
+                    class="card-profesor text-center p-3 mb-4 rounded-4 border border-white border-opacity-10 col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-12">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                            dy=".3em">140x140</text>
+                    </svg>
+
+                    <h3>Georgina Costilla</h3>
+                    <p>Graduada en Ciencias de la Comunicación social y Programadora.</p>
+                    <div id="btn-Profesor" class="btn-group" role="group">
+                        <button type="button" class="btn btn-Profesor">Programacion 3</button>
+                        <button type="button" class="btn btn-Profesor">Programacion 4</button>
+                    </div>
+                </div>
+                <div id="cardProfesor"
+                    class="card-profesor text-center p-3 mb-4 rounded-4 border border-white border-opacity-10 col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-12">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                            dy=".3em">140x140</text>
+                    </svg>
+
+                    <h3>Georgina Costilla</h3>
+                    <p>Graduada en Ciencias de la Comunicación social y Programadora.</p>
+                    <div id="btn-Profesor" class="btn-group" role="group">
+                        <button type="button" class="btn btn-Profesor">Programacion 3</button>
+                        <button type="button" class="btn btn-Profesor">Programacion 4</button>
+                    </div>
+                </div>
+                <div id="cardProfesor"
+                    class="card-profesor text-center p-3 mb-4 rounded-4 border border-white border-opacity-10 col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-12">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                            dy=".3em">140x140</text>
+                    </svg>
+
+                    <h3>Georgina Costilla</h3>
+                    <p>Graduada en Ciencias de la Comunicación social y Programadora.</p>
+                    <div id="btn-Profesor" class="btn-group" role="group">
+                        <button type="button" class="btn btn-Profesor">Programacion 3</button>
+                        <button type="button" class="btn btn-Profesor">Programacion 4</button>
+                    </div>
+                </div>
+                <div id="cardProfesor"
+                    class="card-profesor text-center p-3 mb-4 rounded-4 border border-white border-opacity-10 col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-12">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                            dy=".3em">140x140</text>
+                    </svg>
+
+                    <h3>Georgina Costilla</h3>
+                    <p>Graduada en Ciencias de la Comunicación social y Programadora.</p>
+                    <div id="btn-Profesor" class="btn-group" role="group">
+                        <button type="button" class="btn btn-Profesor">Programacion 3</button>
+                        <button type="button" class="btn btn-Profesor">Programacion 4</button>
+                    </div>
+                </div>
         </section>
 
-        <section id="recursos" class="recursos" aria-labelledby="titulo-recursos">
-            <div>
-                <h2 id="titulo-recursos">Recursos</h2>
-                <p>Accede a una variedad de recursos educativos para complementar tu aprendizaje.</p>
-            </div>
-            <div class="recursos-main">
-                <article class="recurso-card">
-                    <h3>Clases grabadas</h3>
-                    <p>Revisa las clases grabadas para reforzar tus conocimientos y repasar conceptos clave.</p>
-                </article>
-                <article class="recurso-card">
-                    <h3>Documentación</h3>
-                    <p>Consulta documentación técnica y material de estudio para profundizar en tus áreas de interés.
+        <section id="recursos" class="recursos my-5" aria-labelledby="titulo-recursos">
+            <h2 id="titulo-recursos" class="text-center rounded-4 mb-4 border border-white border-opacity-10 py-2">
+                Recursos
+            </h2>
+            <div id="recursosMain" class="d-flex flex-wrap justify-content-center gap-4">
+                <div id="card-recursos"
+                    class="card-recurso text-center p-4 mb-4 rounded-4 border border-white border-opacity-10 col-12 col-md-8 col-lg-4 col-xl-3">
+                    <h5 class="card-title fs-4 mb-3">Dossier 2026</h5>
+                    <p class="card-text mb-4">
+                        Encontrarás toda la información esencial para la materia de Programación 3.
                     </p>
-                </article>
-                <article class="recurso-card">
-                    <h3>Ejercicios</h3>
-                    <p>Practica con ejercicios diseñados para mejorar tus habilidades y aplicar lo aprendido.</p>
-                </article>
+                    <div id="btn-recursos" class="d-flex justify-content-center gap-2">
+                        <a href="#" class="btn btn-Profesor">Leer</a>
+                        <a href="#" class="btn btn-Profesor">Descargar</a>
+                    </div>
+                </div>
+                <div id="card-recursos"
+                    class="card-recurso text-center p-4 mb-4 rounded-4 border border-white border-opacity-10 col-12 col-md-8 col-lg-4 col-xl-3">
+                    <h5 class="card-title fs-4 mb-3">Recursos extras 2026</h5>
+                    <p class="card-text mb-4">
+                        Encontrarás recursos adicionales para la materia de Programación 3.
+                    </p>
+                    <div id="btn-recursos" class="d-flex justify-content-center gap-2">
+                        <a href="#" class="btn btn-Profesor">Leer</a>
+                        <a href="#" class="btn btn-Profesor">Descargar</a>
+                    </div>
+                </div>
+                <div id="card-recursos"
+                    class="card-recurso text-center p-4 mb-4 rounded-4 border border-white border-opacity-10 col-12 col-md-8 col-lg-4 col-xl-3">
+                    <h5 class="card-title fs-4 mb-3">Dossier 2026</h5>
+                    <p class="card-text mb-4">
+                        Encontrarás toda la información esencial para la materia de Programación 3.
+                    </p>
+                    <div id="btn-recursos" class="d-flex justify-content-center gap-2">
+                        <a href="#" class="btn btn-Profesor">Leer</a>
+                        <a href="#" class="btn btn-Profesor">Descargar</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
