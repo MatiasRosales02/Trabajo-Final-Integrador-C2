@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 :root {
@@ -14,35 +14,99 @@
     --sombra-card: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/*----Navbar----*/
+
 body {
-    background: var(--color-primario);
+    background-color: var(--color-primario);
     color: var(--color-blanco);
 }
 
-.logo span {
-    color: var(--color-primario);
-}
-
-.logo {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
+section {
+    scroll-margin-top: 130px;
 }
 
 .header {
     position: fixed;
+    top: 0;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     background-color: var(--color-secundario);
+    z-index: 1000;
 }
 
+.logo {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.logo-color1, .nav-link {
+    color: var(--color-blanco);
+}
+
+.logo-color2, .navbar .nav-link.active,
+.nav-link:hover,
+.dropdown-item:hover,
+.navbar .nav-link[aria-expanded="true"] {
+    color: var(--color-secundario);
+    transition: .4s;
+}
+
+.navbar{
+    background: var(--color-primario);
+    border-radius: 20px;
+}
+
+/*--Menú hamburguesa--*/
+.navbar-toggler {
+    border-color: var(--color-blanco);
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(90deg);
+}
+
+/*--transición del navbar--*/
+.navbar-collapse {
+    transition: height 0.4s ease;
+}
+
+/**--dropdown transición--*/
+.dropdown-menu {
+    background-color: var(--color-secundario);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    color: var(--color-blanco);
+    background-color: var(--color-secundario);
+    z-index: 1;
+}
+
+/*
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 5px 10px;
-    border-radius: 50px;
+    border-radius: 20px;
+    z-index: -1;
 }
 
 .nav-list {
@@ -63,12 +127,13 @@ body {
     transition: 0.3s;
 }
 
+
 .dropdown-menu li {
-    padding: 15px;
+    padding: 150px;
 }
 
 .dropdown-menu {
-    background-color: var(--color-secundario);
+    background-color: var(--color-blanco);
     display: none;
     position: absolute;
     margin-top: 10px;
@@ -84,9 +149,24 @@ body {
 .nav-list li:hover>ul {
     display: block;
 }
+*/
+
 
 /* main */
 
+.nosotros {
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nosotros h1 {
+    color: var(--color-secundario);
+}
+
+.nosotros p {
+    color: var(--color-texto-suave);
+}
+/*
 main {
     padding-top: 100px;
     max-width: 1200px;
@@ -123,7 +203,80 @@ main {
     margin: 0 auto;
     line-height: 1.6;
 }
+*/
 
+/* Tecnicaturas */
+
+#tecnicaturas {
+    width: 100%;
+}
+
+#tecnicaturas h2 {
+    color: var(--color-secundario);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border-radius: 20px;
+    margin-bottom: 2%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#tecnicaturas p {
+    color: var(--color-texto-suave);
+    width: 100%;
+}
+
+.btn-tecnicatura {
+    color: var(--color-blanco);
+    border: 2px solid var(--color-btn);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    transition: 0.3s;
+}
+
+.btn-tecnicatura:hover {
+    background-color: var(--color-btn);
+    border-color: var(--color-btn);
+    color: var(--color-blanco);
+}
+
+/* SECCIÓN PROFESORES */
+
+#profesores h2 {
+    color: var(--color-secundario);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+}
+
+#cardProfesor {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+}
+
+#cardProfesor:hover {
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    box-shadow: var(--sombra-card);
+    border-color: var(--color-secundario);
+    width: 60%;
+}   
+
+.btn-Profesor {
+    color: var(--color-blanco);
+    border: 2px solid var(--color-btn);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+
+}
+/* Recursos */
+
+#recursos h2 {
+    color: var(--color-secundario);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+}
+
+.btn-recursos {
+    color: var(--color-blanco);
+    border: 2px solid var(--color-btn);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+
+}
+
+/*
 .tecnicaturas,
 .recursos,
 .profesores {
@@ -209,10 +362,10 @@ section>div>p {
 .footer {
     background-color: rgba(255, 255, 255, 0.03);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2.5rem 1rem 1.5rem 1rem;
-    text-align: center;
+   /* padding: 2.5rem 1rem 1.5rem 1rem;
+    text-align: center;*/
 }
-
+/*
 .footer-content {
     display: flex;
     flex-direction: column;
@@ -228,7 +381,7 @@ section>div>p {
     flex-wrap: wrap;
     justify-content: center;
 }
-
+*/
 .footer-links a {
     color: var(--color-texto-suave);
     text-decoration: none;
@@ -245,7 +398,7 @@ section>div>p {
 }
 
 /* MEDIA QUERIES */
-
+/*
 @media (max-width: 1024px) {
     main {
         max-width: 90%;
