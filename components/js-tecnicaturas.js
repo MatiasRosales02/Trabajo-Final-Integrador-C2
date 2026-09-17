@@ -74,5 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
             contenedorMaterias.appendChild(btnMateria);
         });
 
+        setTimeout(() => {
+            seccionMaterias.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 50);
     }
 });

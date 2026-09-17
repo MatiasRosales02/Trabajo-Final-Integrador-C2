@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (materiaSeleccionada) {
         filtrarYMostrarProfesores(materiaSeleccionada);
-        cargarRecursos(materiaSeleccionada);
+        cargarRecursos(materiaSeleccionada, false);
     } else {
         mostrarProfesores(profesoresBD);
     }
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.btn-materia').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const materia = e.currentTarget.getAttribute('data-materia');
-                cargarRecursos(materia);
+                cargarRecursos(materia, true);
             });
         });
     }
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarProfesores(profesoresFiltrados);
     }
 
-    function cargarRecursos(materia) {
+    function cargarRecursos(materia, autoScroll = true) {
         seccionRecursos.classList.remove('d-none');
         tituloRecursos.innerText = `Recursos de ${materia}`;
         contenedorRecursos.innerHTML = '';
@@ -186,5 +186,10 @@ document.addEventListener('DOMContentLoaded', () => {
             contenedorRecursos.appendChild(col);
         });
 
+        if (autoScroll) {
+            setTimeout(() => {
+                seccionRecursos.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50);
+        }
     }
 });
