@@ -15,37 +15,6 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-md" aria-label="Navegación principal">
-            <div class="container-fluid">
-                <a class="navbar-brand logo" href="index.html"><span class="logo-color1">Biblio</span><span
-                        class="logo-color2">teca</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto gap-4 me-5">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tecnicaturas.html">Tecnicaturas</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"
-                                href="profesores.html">Profesores</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Cuenta</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-                                <li><a class="dropdown-item" href="#">Subir</a></li>
-                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
     <main class="container my-5 px-4 pb-5 pt-5">
         <div id="banner-filtro" class="alert d-none text-center rounded-4 mb-4 border border-white border-opacity-10">
             <div class="d-flex justify-content-center mt-4">
@@ -71,9 +40,16 @@
         </section>
     </main>
 
-    <footer class="footer d-flex flex-column align-items-center justify-content-center w-100 px-3 py-4 text-center">
-        <p class="mb-0">© 2026 Biblioteca — Proyecto de prueba</p>
-    </footer>
+    <!-- Footer will be inserted here -->
+    <div id="footer"></div>
+
+    <script>
+        fetch("/components/footer.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/components/js-Profesores.js"></script>
