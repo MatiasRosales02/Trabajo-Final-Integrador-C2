@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Profesores de las Tecnicaturas - Biblioteca virtual UTN-FRT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Profesores | FRT-UTN Biblioteca Digital</title>
+</head>
+
+<body>
+    <main class="container my-5 px-4 pb-5 pt-5">
+        <div id="banner-filtro" class="alert d-none text-center rounded-4 mb-4 border border-white border-opacity-10">
+            <div class="d-flex justify-content-center mt-4">
+                <button id="btn-limpiar-filtro" class="btn btn-Profesor btn-sm ms-3">profesores</button>
+            </div>
+            <br>
+            <span id="texto-filtro" class="fs-5"></span>
+        </div>
+
+        <section id="profesores" class="my-5">
+            <h2 id="titulo-profesores" class="text-center py-2 rounded-4 mb-4">Profesores</h2>
+
+            <div id="contenedor-profesores"
+                class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+
+            </div>
+        </section>
+
+        <section id="seccion-recursos" class="my-5 pt-4 d-none">
+            <h2 id="titulo-recursos" class="text-center py-2 rounded-4 mb-4">Recursos de la Materia</h2>
+            <div id="contenedor-recursos" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be inserted here -->
+    <div id="footer"></div>
+
+    <script>
+        fetch("/components/footer.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/components/js-Profesores.js"></script>
+</body>
+
+</html>
