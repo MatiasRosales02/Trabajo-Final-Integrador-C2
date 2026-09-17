@@ -36,11 +36,13 @@ body {
     font-weight: bolder;
 }
 
-.logo-color1, .nav-link {
+.logo-color1,
+.nav-link {
     color: var(--color-blanco);
 }
 
-.logo-color2, .navbar .nav-link.active,
+.logo-color2,
+.navbar .nav-link.active,
 .nav-link:hover,
 .dropdown-item:hover,
 .navbar .nav-link[aria-expanded="true"] {
@@ -48,7 +50,7 @@ body {
     transition: .4s;
 }
 
-.navbar{
+.navbar {
     background: var(--color-primario);
     border-radius: 20px;
 }
@@ -94,6 +96,173 @@ body {
     background-color: var(--color-secundario);
     z-index: 1;
 }
+
+/* main */
+
+.nosotros {
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nosotros h1 {
+    color: var(--color-secundario);
+}
+
+.nosotros p {
+    color: var(--color-texto-suave);
+}
+
+#btn-indicadorCarrusel {
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+}
+
+/* Tecnicaturas */
+
+.texto-secundario {
+    color: var(--color-secundario) !important;
+}
+
+#banner-filtro {
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border-color: var(--color-secundario) !important;
+    color: var(--color-blanco);
+}
+
+#tecnicaturas {
+    width: 100%;
+}
+
+#tecnicaturas h2 {
+    color: var(--color-secundario);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border-radius: 20px;
+    margin-bottom: 2%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#tecnicaturas p {
+    color: var(--color-texto-suave);
+    width: 100%;
+}
+
+.btn-tecnicatura {
+    color: var(--color-blanco);
+    border: 2px solid var(--color-btn);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    transition: 0.3s;
+}
+
+.btn-tecnicatura:hover {
+    background-color: var(--color-btn);
+    border-color: var(--color-btn);
+    color: var(--color-blanco);
+}
+
+/* SECCIÓN PROFESORES */
+
+#profesores h2 {
+    color: var(--color-secundario);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+}
+
+#banner-filtro {
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    color: var(--color-blanco);
+}
+
+#cardProfesor {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+}
+
+#cardProfesor:hover {
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    box-shadow: var(--sombra-card);
+    border-color: var(--color-secundario);
+    width: 60%;
+}
+
+.btn-Profesor {
+    color: var(--color-blanco);
+    border: 2px solid var(--color-btn);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+
+}
+
+/* Recursos */
+
+#recursos h2 {
+    color: var(--color-secundario);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+}
+
+.btn-recursos {
+    color: var(--color-blanco);
+    border: 2px solid var(--color-btn);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+
+}
+
+/* Estilos de secciones, cards y botones */
+h2 {
+    color: var(--color-secundario);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-tecnicatura,
+.btn-Profesor {
+    color: var(--color-blanco);
+    border: 2px solid var(--color-btn);
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+}
+
+.btn-tecnicatura.active,
+.btn-tecnicatura:hover,
+.btn-Profesor:hover {
+    background: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+.card-profesor,
+.card-recurso {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    transition: 0.3s;
+}
+
+.card-profesor:hover,
+.card-recurso:hover {
+    border-color: var(--color-secundario);
+    transform: translateY(-4px);
+}
+
+/* footer */
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* padding: 2.5rem 1rem 1.5rem 1rem;
+    text-align: center;*/
+}
+
+.footer-links a {
+    color: var(--color-texto-suave);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--color-secundario);
+}
+
+.footer p {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
 
 /*
 .navbar {
@@ -147,21 +316,6 @@ body {
 }
 */
 
-
-/* main */
-
-.nosotros {
-    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nosotros h1 {
-    color: var(--color-secundario);
-}
-
-.nosotros p {
-    color: var(--color-texto-suave);
-}
 /*
 main {
     padding-top: 100px;
@@ -200,78 +354,6 @@ main {
     line-height: 1.6;
 }
 */
-
-/* Tecnicaturas */
-
-#tecnicaturas {
-    width: 100%;
-}
-
-#tecnicaturas h2 {
-    color: var(--color-secundario);
-    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
-    border-radius: 20px;
-    margin-bottom: 2%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#tecnicaturas p {
-    color: var(--color-texto-suave);
-    width: 100%;
-}
-
-.btn-tecnicatura {
-    color: var(--color-blanco);
-    border: 2px solid var(--color-btn);
-    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
-    transition: 0.3s;
-}
-
-.btn-tecnicatura:hover {
-    background-color: var(--color-btn);
-    border-color: var(--color-btn);
-    color: var(--color-blanco);
-}
-
-/* SECCIÓN PROFESORES */
-
-#profesores h2 {
-    color: var(--color-secundario);
-    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
-}
-
-#cardProfesor {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: 0.5s;
-}
-
-#cardProfesor:hover {
-    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
-    box-shadow: var(--sombra-card);
-    border-color: var(--color-secundario);
-    width: 60%;
-}
-
-.btn-Profesor {
-    color: var(--color-blanco);
-    border: 2px solid var(--color-btn);
-    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
-
-}
-/* Recursos */
-
-#recursos h2 {
-    color: var(--color-secundario);
-    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
-}
-
-.btn-recursos {
-    color: var(--color-blanco);
-    border: 2px solid var(--color-btn);
-    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
-
-}
-
 /*
 .tecnicaturas,
 .recursos,
@@ -353,14 +435,6 @@ section>div>p {
     line-height: 1.5;
 }
 
-/* footer */
-
-.footer {
-    background-color: rgba(255, 255, 255, 0.03);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-   /* padding: 2.5rem 1rem 1.5rem 1rem;
-    text-align: center;*/
-}
 /*
 .footer-content {
     display: flex;
@@ -378,20 +452,15 @@ section>div>p {
     justify-content: center;
 }
 */
-.footer-links a {
-    color: var(--color-texto-suave);
-    text-decoration: none;
-    transition: 0.3s;
+/* footer */
+/*
+.footer {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 1rem 1.5rem 1rem;
+    text-align: center;
 }
-
-.footer-links a:hover {
-    color: var(--color-secundario);
-}
-
-.footer p {
-    color: #64748b;
-    font-size: 0.85rem;
-}
+*/
 
 /* MEDIA QUERIES */
 /*
