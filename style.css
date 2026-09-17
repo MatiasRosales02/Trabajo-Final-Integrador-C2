@@ -7,11 +7,17 @@
 
 :root {
     --color-primario: #1e293b;
+    --color-superficie: #334155;
+    --color-primario-suave: #64748b;
     --color-secundario: #ff7700;
     --color-btn: #d97757;
     --color-blanco: #ffffff;
     --color-texto-suave: #cbd5e1;
     --sombra-card: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /*----Navbar----*/
@@ -22,16 +28,29 @@ body {
 }
 
 section {
-    scroll-margin-top: 130px;
+    scroll-margin-top: 5px;
+}
+
+hr {
+    border: none;
+    height: 5px;
+    background-color: var(--color-secundario);
+    box-shadow: 0 0 1rem var(--color-secundario);
+    border-radius: 10px;
+}
+
+.btnTop:hover {
+    background-color: var(--color-secundario);
 }
 
 .header {
-    position: fixed;
     top: 0;
     width: 100%;
-    padding: 1rem;
+    padding: .6rem;
     background-color: var(--color-secundario);
     z-index: 1000;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .logo {
@@ -56,7 +75,11 @@ section {
 
 .navbar {
     background: var(--color-primario);
-    border-radius: 20px;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
 }
 
 /*--Menú hamburguesa--*/
@@ -102,7 +125,6 @@ section {
 }
 
 /* main */
-
 .nosotros {
     background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -137,7 +159,7 @@ section {
     width: 100%;
 }
 
-#tecnicaturas h2 {
+h2 {
     color: var(--color-secundario);
     background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
     border-radius: 20px;
@@ -266,6 +288,25 @@ h2 {
     color: #64748b;
     font-size: 0.85rem;
 }
+
+
+/*----btnVolVerArriba-----*/
+
+.btnTop {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: .3s;
+}
+
+.btnTop:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 1rem var(--color-secundario)
+}
+
 
 
 /*
@@ -466,6 +507,19 @@ section>div>p {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2.5rem 1rem 1.5rem 1rem;
     text-align: center;
+.footer-links a {
+    color: var(--color-texto-suave);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--color-secundario);
+}
+
+.footer p {
+    color: var(--color-texto-suave);
+    font-size: 0.85rem;
 }
 */
 
@@ -597,4 +651,122 @@ section>div>p {
         flex-direction: column;
         gap: 0.8rem;
     }
+}
+
+/*-----preguntas-frecuentes-----*/
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-texto-suave);
+    color: var(--color-blanco);
+    box-shadow: none;
+    transition: .4s;
+}
+
+.accordion-button {
+    color: var(--color-blanco);
+    background: linear-gradient(120deg, #1e293b 30%, #ff7700 100%);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button{
+    transition: .4s;
+}
+
+.accordion-item {
+    border: solid 2px var(--color-secundario);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-button:hover {
+    padding-left: 25px;
+}
+
+.accordion-collapse {
+    transition: height 0.35s ease;
+}
+
+.accordion-body {
+    background: var(--color-secundario);
+    color: var(--color-blanco);
+    transition: opacity 0.4s ease;
+}
+
+/*-----sobre-nosotros-----*/
+
+.lista-nosotros{
+    list-style-type: none;
+}
+
+.lista-nosotros li a{
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border: 2px solid var(--color-secundario);
+    border-radius: 5px;
+    padding: 8px;
+    text-decoration: none;
+    color: var(--color-blanco);
+    transition: .3s;
+}
+
+.card-perfil {
+    border-radius: 25px;
+}
+
+.card-img-top {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px auto 0;
+}
+
+.card-perfil, .btn-perfil, .card-proyecto {
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    transition: .3s;
+}
+
+.btn-perfil { 
+    border-color: var(--color-secundario);
+    background: var(--color-primario);
+}
+
+.card-body, .card-proyecto{
+    border-radius: 20px;
+    color: var(--color-blanco);
+    
+}
+
+.card-perfil:hover, .btn-perfil:hover, .lista-nosotros li a:hover, .card-proyecto:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 1rem var(--color-secundario);
+    border-color: var(--color-secundario);
+}
+
+.btn-perfil:hover {
+    background: var(--color-secundario);
+}
+
+/*-----formulario-----*/
+
+.form-contacto {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-label, .bi {
+    color: var(--color-secundario);
+}
+.form-control {
+    border: 2px solid var(--color-primario);
+    transition: .3s;
+
+}
+
+.form-control:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 1rem var(--color-secundario);
 }

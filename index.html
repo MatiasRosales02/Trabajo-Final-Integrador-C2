@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Biblioteca virtual de la UTN-FRT para las tecnicaturas">
@@ -23,37 +22,16 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-md" aria-label="Navegación principal">
-            <div class="container-fluid">
-                <a class="navbar-brand logo" href="#"><span class="logo-color1">Biblio</span><span
-                        class="logo-color2">teca</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto gap-4 me-5">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tecnicaturas">Tecnicaturas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#profesores">Profesores</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#recursos">Recursos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cuenta</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-                            <li><a class="dropdown-item" href="#">Subir</a></li>
-                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="container my-5 px-4 pb-5 pt-5">
+    <div id="header"></div>
+    <script>
+        fetch("./components/header.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("header").innerHTML = html;
+        });
+    </script>
+    
+    <main class="container my-5 px-4 pb-5">
         <section id="nosotro"
             class="nosotros text-center p-4 pt-5 pb-4 min-vh-40 d-flex flex-column justify-content-center align-items-center mb-5 rounded-4 border border-white border-opacity-10"
             aria-labelledby="titulo-nosotros">
@@ -77,17 +55,17 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="/img/utn-1.jpg" class="d-block w-100" alt="...">
+                        <img src="/img/utn-1.jpg" class="foto-carrusel d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="/img/utn-2.jpg" class="d-block w-100" alt="...">
+                        <img src="/img/utn-2.jpg" class="foto-carrusel d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="/img/utn-3.jpg" class="d-block w-100" alt="...">
+                        <img src="/img/utn-3.jpg" class="foto-carrusel d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                     </div>
@@ -104,21 +82,23 @@
                 </button>
             </div>
         </section>
+        <div id="contenedorBtnArriba" class="position-fixed bottom-0 end-0 p-4 d-none">
+            <button id="btnTop" class="btnTop btn btn-primary rounded-circle" type="button">↑</button>
+        </div>
     </main>
-    <!-- Footer will be inserted here -->
+    
     <div id="footer"></div>
 
     <script>
-        fetch("/components/footer.html")
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById("footer").innerHTML = html;
-            });
+        fetch("./components/footer.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("footer").innerHTML = html;
+        });
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./components/btnArriba.js"></script>
 </body>
 
 </html>
