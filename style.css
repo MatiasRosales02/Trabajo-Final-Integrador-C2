@@ -16,7 +16,7 @@
     --sombra-card: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -75,8 +75,8 @@ hr {
 
 .navbar {
     background: var(--color-primario);
-    border-top-left-radius: 10px ;
-    border-top-right-radius: 10px ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 
@@ -138,7 +138,7 @@ hr {
     color: var(--color-texto-suave);
 }
 
-#btn-indicadorCarrusel {
+.carouselExampleDark {
     background-color: var(--color-secundario);
     border: 1px solid var(--color-secundario);
 }
@@ -159,14 +159,6 @@ hr {
     width: 100%;
 }
 
-h2 {
-    color: var(--color-secundario);
-    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
-    border-radius: 20px;
-    margin-bottom: 2%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 #tecnicaturas p {
     color: var(--color-texto-suave);
     width: 100%;
@@ -185,6 +177,11 @@ h2 {
     color: var(--color-blanco);
 }
 
+.card {
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border-color: var(--color-secundario);
+}
+
 /* SECCIÓN PROFESORES */
 
 #profesores h2 {
@@ -200,6 +197,11 @@ h2 {
 #cardProfesor {
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: 0.5s;
+}
+
+.cardProfesor {
+    background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #cardProfesor:hover {
@@ -234,7 +236,7 @@ h2 {
 h2 {
     color: var(--color-secundario);
     background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-secundario);
 }
 
 .btn-tecnicatura,
@@ -671,7 +673,7 @@ section>div>p {
     box-shadow: none;
 }
 
-.accordion-button{
+.accordion-button {
     transition: .4s;
 }
 
@@ -698,11 +700,11 @@ section>div>p {
 
 /*-----sobre-nosotros-----*/
 
-.lista-nosotros{
+.lista-nosotros {
     list-style-type: none;
 }
 
-.lista-nosotros li a{
+.lista-nosotros li a {
     background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
     border: 2px solid var(--color-secundario);
     border-radius: 5px;
@@ -724,23 +726,29 @@ section>div>p {
     margin: 20px auto 0;
 }
 
-.card-perfil, .btn-perfil, .card-proyecto {
+.card-perfil,
+.btn-perfil,
+.card-proyecto {
     background: linear-gradient(135deg, rgba(255, 119, 0, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
     transition: .3s;
 }
 
-.btn-perfil { 
+.btn-perfil {
     border-color: var(--color-secundario);
     background: var(--color-primario);
 }
 
-.card-body, .card-proyecto{
+.card-body,
+.card-proyecto {
     border-radius: 20px;
     color: var(--color-blanco);
-    
+
 }
 
-.card-perfil:hover, .btn-perfil:hover, .lista-nosotros li a:hover, .card-proyecto:hover {
+.card-perfil:hover,
+.btn-perfil:hover,
+.lista-nosotros li a:hover,
+.card-proyecto:hover {
     transform: scale(1.02);
     box-shadow: 0 0 1rem var(--color-secundario);
     border-color: var(--color-secundario);
@@ -757,9 +765,11 @@ section>div>p {
     margin: 0 auto;
 }
 
-.form-label, .bi {
+.form-label,
+.bi {
     color: var(--color-secundario);
 }
+
 .form-control {
     border: 2px solid var(--color-primario);
     transition: .3s;
