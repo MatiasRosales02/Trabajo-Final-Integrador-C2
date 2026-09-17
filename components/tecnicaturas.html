@@ -18,7 +18,17 @@
 </head>
 
 <body>
-    <main class="container my-5 px-4 pb-5 pt-5">
+    <div id="header"></div>
+
+    <script>
+        fetch("/components/header.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("header").innerHTML = html;
+        });
+    </script>
+    
+    <main class="container my-5 px-4 pb-5 ">
         <section id="tecnicaturas">
             <div class="container-fluid py-4">
                 <h2 class="text-center py-2 rounded-4">
